@@ -2,4 +2,11 @@
 members = [
     "section_01_basics/ch_01_hello_world", 
     "section_01_basics/ch_02_types_variables"
-]
+, "section_01_basics/ch_03_functions", "section_01_basics/ch_04_modules", "section_01_basics/exercise_module"]
+
+# ใช้ dependency resolver เวอร์ชัน 2 (แนะนำสำหรับ edition 2021+)
+resolver = "2"
+
+# กำหนดให้ ch_01_hello_world เป็น default package
+# ที่จะรันเมื่อใช้ cargo run จาก workspace root
+default-members = ["section_01_basics/ch_01_hello_world"]
