@@ -1,3 +1,3 @@
 pub fn good_morning() {
-    println!("Good morning from the greetings module!");
+    println!("🌅 Good morning from the morning module!");
 }

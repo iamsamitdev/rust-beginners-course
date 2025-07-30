@@ -11,6 +11,7 @@ mod greetings;
 
 use greetings::morning::*;
 use greetings::evening::*;
+use greetings::special;
 
 fn main() {
 
@@ -28,4 +29,5 @@ fn main() {
 
     good_morning();
     good_evening();
+    special::holiday::happy_new_year();
 }
