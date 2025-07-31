@@ -4,7 +4,9 @@ members = [
     "section_01_basics/ch_02_types_variables", 
     "section_01_basics/ch_03_functions", 
     "section_01_basics/ch_04_modules", 
-    "section_01_basics/exercise_module"
+    "section_01_basics/exercise_module", 
+    "section_02_control_ownership/ch_01_ifelse_condition", "section_02_control_ownership/ch_02_match_condition", "section_02_control_ownership/ch_03_loop", "section_02_control_ownership/ch_04_stack_heap", "section_02_control_ownership/ch_05_ownership_borrowing", 
+    "section_02_control_ownership/exercise"
 ]
 
 # ใช้ dependency resolver เวอร์ชัน 2 (แนะนำสำหรับ edition 2021+)

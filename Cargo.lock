@@ -7,6 +7,14 @@ name = "ch_01_hello_world"
 version = "0.1.0"
 
 [[package]]
+name = "ch_01_ifelse_condition"
+version = "0.1.0"
+
+[[package]]
+name = "ch_02_match_condition"
+version = "0.1.0"
+
+[[package]]
 name = "ch_02_types_variables"
 version = "0.1.0"
 
@@ -15,7 +23,23 @@ name = "ch_03_functions"
 version = "0.1.0"
 
 [[package]]
+name = "ch_03_loop"
+version = "0.1.0"
+
+[[package]]
 name = "ch_04_modules"
+version = "0.1.0"
+
+[[package]]
+name = "ch_04_stack_heap"
+version = "0.1.0"
+
+[[package]]
+name = "ch_05_ownership_borrowing"
+version = "0.1.0"
+
+[[package]]
+name = "exercise"
 version = "0.1.0"
 
 [[package]]
