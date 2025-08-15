@@ -1,5 +1,4 @@
 fn main() {
-
     let status_code = 500;
 
     match status_code {
@@ -8,12 +7,12 @@ fn main() {
             println!("Error: Page Not Found.");
             println!("Please check the URL and try again.");
             report_error_to_system(404);
-        },
+        }
         500 => {
             println!("Error: Internal Server Error.");
             println!("Our engineers have been notified.");
             report_error_to_system(500);
-        },
+        }
         _ => println!("Unknown Status Code"),
     }
 
@@ -38,7 +37,7 @@ fn main() {
         3 => println!("Wednesday"),
         _ => println!("Other day"), // ทำงานเมื่อไม่ตรงกับเคสใดๆ ก่อนหน้า
     }
-    
+
     println!("--------------------------");
 
     let number = 22;
@@ -64,9 +63,8 @@ fn main() {
 
     match value {
         Some(v) => println!("Value is: {}", v), // จับคู่กับ Some
-        None => println!("No value provided"), // จับคู่กับ None
+        None => println!("No value provided"),  // จับคู่กับ None
     }
-
 }
 
 // ฟังก์ชันสมมติสำหรับรายงานข้อผิดพลาด

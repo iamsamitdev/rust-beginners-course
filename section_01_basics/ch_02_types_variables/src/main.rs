@@ -2,8 +2,8 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * Statically Typed และการอนุมานชนิดข้อมูล (Type Inference)
-    */
+     * Statically Typed และการอนุมานชนิดข้อมูล (Type Inference)
+     */
     // เราสามารถประกาศชนิดข้อมูลอย่างชัดเจนได้
     // `i32` คือ signed integer ขนาด 32 บิต
     let a: i32 = 100;
@@ -18,8 +18,8 @@ fn main() {
     println!("integer with inferred type: {}", b);
 
     /*
-    * Scalar Types: Floating-Points
-    */
+     * Scalar Types: Floating-Points
+     */
 
     println!("-------------------------");
 
@@ -35,8 +35,8 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * Signed และ Unsigned Integers
-    */
+     * Signed และ Unsigned Integers
+     */
     // Signed integer สามารถติดลบได้
     let balance: i32 = -500;
 
@@ -49,8 +49,8 @@ fn main() {
     println!("Unsigned integer: {}", age);
 
     /*
-    * ชนิดข้อมูลและขนาดในหน่วยความจำ (Bits)
-    */
+     * ชนิดข้อมูลและขนาดในหน่วยความจำ (Bits)
+     */
     // i8 ใช้ 8 บิต สามารถเก็บค่าได้ตั้งแต่ -128 ถึง 127
     let small_signed_number: i8 = 127;
 
@@ -63,8 +63,8 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * Boolean Type
-    */
+     * Boolean Type
+     */
     // Boolean type มีแค่สองค่า: true และ false
     let is_active: bool = true;
     let is_logged_in: bool = false;
@@ -74,8 +74,8 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * Character Type
-    */
+     * Character Type
+     */
     // Character type ใช้สำหรับเก็บตัวอักษร Unicode ขนาด 4 ไบต์
     // สามารถเก็บตัวอักษรพิเศษหรือสัญลักษณ์ได้
     let letter: char = 'R';
@@ -86,8 +86,8 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * Character Type String
-    */
+     * Character Type String
+     */
     // String type ใช้สำหรับเก็บข้อความหรือชุดอักขระ
     let greeting: String = "Hello, world!".to_string();
     println!("Greeting: {}", greeting);
@@ -95,8 +95,8 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * ตัวแปร (Variables)
-    */
+     * ตัวแปร (Variables)
+     */
     // ประกาศตัวแปรชื่อ 'x' และกำหนดค่าให้เป็น 5
     let x = 5;
     println!("The value of x is: {}", x);
@@ -104,8 +104,8 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * Interpolation (การแทรกค่าในสตริง)
-    */
+     * Interpolation (การแทรกค่าในสตริง)
+     */
 
     let name = "Alice";
     let age = 30;
@@ -116,13 +116,16 @@ fn main() {
 
     // {0} จะอ้างอิงถึง "Alice" (อาร์กิวเมนต์ตัวแรก)
     // {1} จะอ้างอิงถึง "Bob" (อาร์กิวเมนต์ตัวที่สอง)
-    println!("{0} is a friend of {1}. And {1} is also a friend of {0}.", "Alice", "Bob");
+    println!(
+        "{0} is a friend of {1}. And {1} is also a friend of {0}.",
+        "Alice", "Bob"
+    );
 
     println!("-------------------------");
 
     /*
-    * Mutability and Immutability (การเปลี่ยนค่าได้และไม่ได้)
-    */
+     * Mutability and Immutability (การเปลี่ยนค่าได้และไม่ได้)
+     */
     // โดยพื้นฐานแล้ว ตัวแปรใน Rust ไม่สามารถเปลี่ยนแปลงค่าได้ (Immutable) เว้นแต่จะระบุ mut
 
     // 'immutable_var' ไม่สามารถเปลี่ยนแปลงค่าได้
@@ -142,12 +145,11 @@ fn main() {
 
     println!("Mutable variable value: {}", mutable_var);
 
-
     println!("-------------------------");
 
     /*
-    * Constants (ค่าคงที่)
-    */
+     * Constants (ค่าคงที่)
+     */
     // ประกาศค่าคงที่ ต้องระบุชนิดข้อมูล (type annotation)
     const MAX_POINTS: u32 = 100_000;
     const MIN_POINTS: u32 = 0;
@@ -160,25 +162,26 @@ fn main() {
     println!("-------------------------");
 
     /*
-    * Variable Shadowing (การบดบังตัวแปร)
-    */
+     * Variable Shadowing (การบดบังตัวแปร)
+     */
     let x = 5;
     println!("The value of x is: {}", x); // แสดงผล 5
 
     // 'x' ตัวใหม่นี้จะ "บดบัง" (shadow) 'x' ตัวเดิม
     // เราสามารถเปลี่ยนชนิดข้อมูลได้ด้วย
-    let x = "hello"; 
+    let x = "hello";
     println!("The value of x is now: {}", x); // แสดงผล "hello"
 
     println!("-------------------------");
 
     /*
-    * Scopes and Blocks (ขอบเขตและบล็อก)
-    */
+     * Scopes and Blocks (ขอบเขตและบล็อก)
+     */
 
     let outer_var = "I'm outside";
 
-    { // เริ่ม scope ใหม่
+    {
+        // เริ่ม scope ใหม่
         let inner_var = "I'm inside";
         println!("{}", outer_var); // เข้าถึงตัวแปรภายนอกได้
         println!("{}", inner_var); // เข้าถึงตัวแปรภายในได้
@@ -197,7 +200,7 @@ fn main() {
     println!("Another distance in i32: {}", another_distance);
 
     println!("-------------------------");
-   
+
     // การจัดการข้อผิดพลาด
     match divide(10.0, 2.0) {
         Ok(result) => println!("Result: {}", result),
@@ -208,7 +211,6 @@ fn main() {
         Ok(result) => println!("Result: {}", result),
         Err(e) => println!("Error: {}", e),
     }
-
 }
 
 /*

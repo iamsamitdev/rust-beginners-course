@@ -1,5 +1,4 @@
 pub fn lifetime_example() {
-    
     let string1 = String::from("Programming");
     let string2 = String::from("Rust");
 
@@ -10,11 +9,12 @@ pub fn lifetime_example() {
     // Case 1
     // เก็บอ้างอิงไว้ให้อยู่นานกว่าเจ้าของ (owner) จริง
     // เริ่มขอบเขตของ "ห้องใหญ่"
-    let s1 = String::from("Programming");  // s1 มีชีวิตอยู่ถึงจบโปรแกรม
+    let s1 = String::from("Programming"); // s1 มีชีวิตอยู่ถึงจบโปรแกรม
     let r; // r ก็มีชีวิตอยู่ถึงจบโปรแกรม
     let s2 = String::from("Rust"); // s2 เกิดขึ้นที่นี่
-    
-    { // ---- เริ่มขอบเขต "ห้องเล็ก" ----
+
+    {
+        // ---- เริ่มขอบเขต "ห้องเล็ก" ----
         // let s2 = String::from("Rust"); // s2 เกิดขึ้นที่นี่
         // r พยายามยืมค่าที่อายุขัยถูกผูกกับตัวที่สั้นที่สุด (คือ s2)
         r = longest(&s1, &s2); // error: does not live long enough
@@ -40,11 +40,7 @@ pub fn lifetime_example() {
 // และส่งกลับอ้างอิงที่มีอายุการใช้งานเดียวกัน
 pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     // เปรียบเทียบความยาวของ x และ y
-    if x.len() > y.len() {
-        x
-    } else {
-        y
-    }
+    if x.len() > y.len() { x } else { y }
 }
 
 // ❌ ตัวอย่างฟังก์ชันที่ผิด
@@ -52,5 +48,9 @@ pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 pub fn bad_longest<'a>(x: &'a str, y: &'a str) -> String {
     // let local = String::from("temporary");
     // if x.len() > y.len() { x } else { local.as_str() } // คืนอ้างอิง local
-    if x.len() > y.len() { x.to_string() } else { String::from("temporary") } // คืนอ้างอิง local
+    if x.len() > y.len() {
+        x.to_string()
+    } else {
+        String::from("temporary")
+    } // คืนอ้างอิง local
 } // local ถูก drop ที่นี่ ──── dangling!

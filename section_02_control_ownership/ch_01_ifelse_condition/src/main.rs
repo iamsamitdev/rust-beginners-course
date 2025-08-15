@@ -6,7 +6,7 @@ fn main() {
         println!("ตัวเลข {} เป็นเลขที่หารด้วย 4 ลงตัว", number);
     } else if number % 3 == 0 {
         println!("ตัวเลข {} เป็นเลขที่หารด้วย 3 ลงตัว", number);
-    }  else {
+    } else {
         println!("ตัวเลข {} ไม่สามารถหารด้วย 4 หรือ 3 ลงตัว", number);
     }
 

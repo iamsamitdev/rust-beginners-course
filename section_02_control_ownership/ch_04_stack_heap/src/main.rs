@@ -1,6 +1,6 @@
 // ตัวอย่างโค้ด: การทำงานบน Stack
 // fn main() {
-    
+
 //     let x = 5; // i32 มีขนาดคงที่, เก็บไว้ใน Stack
 //     let y = 10; // i32 มีขนาดคงที่, เก็บไว้ใน Stack
 
@@ -23,7 +23,7 @@
 //     let s2 = String::from("World"); // String ถูกเก็บไว้ใน Heap
 
 //     println!("The original strings are: {}, {}", s1, s2); // s1 และ s2 ยังคงอยู่บน Stack
-    
+
 //     // Calling the concatenate function
 //     let result = concatenate(s1, s2); // ค่า s1 และ s2 ถูก "move" ไปให้ฟังก์ชัน concatenate
 
@@ -41,7 +41,6 @@
 //     result // คืนค่า result ซึ่งเป็น String ใหม่
 // } // ตัวแปร result, b, a ถูกลบออกจาก Stack
 
-
 // ตัวอย่างโค้ด: การทำงานบน Heap เพิ่มเติม
 fn main() {
     // สร้างข้อมูลบน Heap
@@ -57,9 +56,8 @@ fn main() {
     // ตัวแปร game (struct Game) อยู่บน Stack
     // แต่ field ที่ชื่อ `name` (String) มีข้อมูลจริงๆ ("Minecraft") อยู่บน Heap
     println!("Playing {} with score {}", game.name, game.score);
-
 } // เมื่อจบ main, game จะถูก drop -> String ภายในจะคืนหน่วยความจำบน Heap
-  // b1 ก็จะถูก drop -> คืนหน่วยความจำของเลข 5 บน Heap
+// b1 ก็จะถูก drop -> คืนหน่วยความจำของเลข 5 บน Heap
 
 struct Game {
     name: String, // String จัดการข้อมูลบน Heap

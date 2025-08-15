@@ -21,7 +21,6 @@
 //     println!("x is still accessible: {}", x); // x ยังคงสามารถใช้งานได้
 // }
 
-
 // fn takes_ownership(some_string: String) {
 //     println!("{}", some_string);
 // } // some_string หลุดออกจาก scope, หน่วยความจำถูกคืน
@@ -47,7 +46,6 @@
 
 // 2. การยืมแบบเปลี่ยนแปลง (Mutable Borrowing
 fn main() {
-
     let mut s = String::from("hello");
 
     change(&mut s); // ยืม s แบบ mutable

@@ -1,5 +1,4 @@
 fn main() {
-    
     // การสร้าง Vector
     let mut numbers: Vec<i32> = Vec::new();
 
@@ -19,9 +18,9 @@ fn main() {
     let fruits2: Vec<String> = vec![
         "Apple".into(),
         "Banana".into(),
-        "Orange".into(), 
+        "Orange".into(),
         "300".into(),
-        500.to_string()
+        500.to_string(),
     ];
 
     println!("{:?}", fruits2);
@@ -33,7 +32,7 @@ fn main() {
     // การเข้าถึงข้อมูล
     match numbers.get(3) {
         Some(value) => println!("found 1: {}", value),
-        None => println!("not found")
+        None => println!("not found"),
     }
 
     // การวนลูป
@@ -48,10 +47,8 @@ fn main() {
 
     println!("result after multiplying by 2: {:?}", numbers);
 
-
     // ตัวอย่าง Array
     // Array([T; N])
     let arr: [i32; 5] = [10, 20, 30, 40, 50]; // ขนาดตายตัว
     println!("{:?}", arr);
-
 }

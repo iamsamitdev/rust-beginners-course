@@ -1,5 +1,4 @@
 pub fn borrowing_example() {
-    
     let s1 = String::from("Hello Rustaceans!");
 
     // Borrowing: s1 ถูกยืมโดย s2
@@ -39,10 +38,9 @@ pub fn borrowing_example() {
     println!("r4: {}", r4);
 
     // r4 ใช้งานครั้งสุดท้ายแล้ว
-    let r5 = &mut r1;  // ตอนนี้ r1 สามารถยืมแบบแก้ไขได้อีกครั้ง
+    let r5 = &mut r1; // ตอนนี้ r1 สามารถยืมแบบแก้ไขได้อีกครั้ง
     r5.push_str(" is fun!");
     println!("r4: {}", r5);
-
 } // s1 และ s2 จะถูก drop ที่นี่
 
 // ฟังก์ชันแบบไม่สามารถแก้ไขค่าได้

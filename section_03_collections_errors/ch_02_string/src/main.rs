@@ -1,5 +1,4 @@
 fn main() {
-    
     // String - owned, mutable
     let mut greeting = String::new();
     greeting.push_str("Hello");
@@ -10,8 +9,8 @@ fn main() {
     let message = String::from("Learning Rust");
 
     // การต่อ string
-    let full_message = format!("{} - {}", greeting, message);
-    println!("{}", full_message);
+    let full_message = format!("{greeting} - {message}");
+    println!("{full_message}");
 
     // การทำงานกับ UTF-8 - 1 ตัวอักษรภาษาไทย เป็น 3 bytes
     // สวัสดีครับ เป็น 3 bytes * 10 = 30 bytes
@@ -23,6 +22,5 @@ fn main() {
 
     // การแยก string
     let words: Vec<&str> = "Rust is a safe language".split(' ').collect();
-    println!("all words: {:?}", words);
-
+    println!("all words: {words:?}")
 }

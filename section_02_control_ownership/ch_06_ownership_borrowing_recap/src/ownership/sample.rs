@@ -1,5 +1,4 @@
 pub fn ownership_example() {
-    
     // s1 เป็น owner ของ String
     let s1 = String::from("Hello Rustaceans!");
 

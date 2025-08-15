@@ -1,6 +1,6 @@
-mod ownership;
 mod borrowing;
 mod lifetime;
+mod ownership;
 
 fn main() {
     println!("-- Ownership Example --");

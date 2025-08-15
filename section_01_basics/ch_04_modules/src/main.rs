@@ -1,5 +1,5 @@
-mod meetings;
 mod greetings;
+mod meetings;
 
 // use greetings::morning;
 // use greetings::evening;
@@ -9,12 +9,11 @@ mod greetings;
 //     evening,
 // };
 
-use greetings::morning::*;
 use greetings::evening::*;
+use greetings::morning::*;
 use greetings::special;
 
 fn main() {
-
     meetings::hello();
     meetings::goodbye();
 
