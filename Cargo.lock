@@ -11,7 +11,15 @@ name = "ch_01_ifelse_condition"
 version = "0.1.0"
 
 [[package]]
+name = "ch_01_vector"
+version = "0.1.0"
+
+[[package]]
 name = "ch_02_match_condition"
+version = "0.1.0"
+
+[[package]]
+name = "ch_02_string"
 version = "0.1.0"
 
 [[package]]
@@ -36,6 +44,10 @@ version = "0.1.0"
 
 [[package]]
 name = "ch_05_ownership_borrowing"
+version = "0.1.0"
+
+[[package]]
+name = "ch_06_ownership_borrowing_recap"
 version = "0.1.0"
 
 [[package]]

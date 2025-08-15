@@ -1,0 +1,6 @@
+[package]
+name = "ch_06_ownership_borrowing_recap"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
