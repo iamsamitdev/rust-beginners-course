@@ -10,8 +10,9 @@ members = [
     "section_02_control_ownership/ch_03_loop", 
     "section_02_control_ownership/ch_04_stack_heap", 
     "section_02_control_ownership/ch_05_ownership_borrowing", "section_02_control_ownership/ch_06_ownership_borrowing_recap", 
-    "section_02_control_ownership/exercise"
-, "section_03_collections_errors/ch_01_vector", "section_03_collections_errors/ch_02_string"]
+    "section_02_control_ownership/exercise",   
+    "section_03_collections_errors/ch_01_vector", 
+    "section_03_collections_errors/ch_02_string"]
 
 # ใช้ dependency resolver เวอร์ชัน 2 (แนะนำสำหรับ edition 2021+)
 resolver = "2"
