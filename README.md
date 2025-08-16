@@ -182,10 +182,10 @@ cargo test
 
 ## 🎯 สิ่งที่จะได้เรียนรู้ใน Section 03
 
-**Chapter 1**: Vector และการจัดการ collections
-**Chapter 2**: String และการจัดการข้อความใน Rust
-**Chapter 3**: HashMap และการจัดการ key-value
-**Chapter 4**: Option, Result และ error handling
+- **Chapter 1**: Vector และการจัดการ collections
+- **Chapter 2**: String และการจัดการข้อความใน Rust
+- **Chapter 3**: HashMap และการจัดการ key-value
+- **Chapter 4**: Option, Result และ error handling
 
 ## 🎯 สิ่งที่จะได้เรียนรู้ใน Section 04
 
