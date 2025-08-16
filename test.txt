@@ -1,0 +1,3 @@
+Hello Rust programming!
+ทดสอบภาษาไทย
+อ่านได้หรือไม่

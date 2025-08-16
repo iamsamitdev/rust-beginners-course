@@ -38,9 +38,18 @@
   - `exercise/` – แบบฝึกหัด Control Flow และ Ownership
 
 ### Section 03: Collections และ Error Handling
-- `section_03_collections_errors/` – โครงสร้างข้อมูลและการจัดการข้อผิดพลาด
-  - `ch_01_vector/` – Vector และการจัดการ collections
-  - `ch_02_string/` – String และการจัดการข้อความ
+ - `section_03_collections_errors/` – โครงสร้างข้อมูลและการจัดการข้อผิดพลาด
+   - `ch_01_vector/` – Vector และการจัดการ collections
+   - `ch_02_string/` – String และการจัดการข้อความ
+   - `ch_03_hashmap/` – HashMap และการจัดการ key-value
+   - `ch_04_option_result/` – Option, Result และ error handling
+
+### Section 04: Structs, Enum, Method, Trait
+- `section_04_structs_traits_project/` – การสร้าง custom types และการใช้งาน trait
+  - `ch_01_struct/` – การสร้างและใช้งาน struct
+  - `ch_02_enum/` – การสร้างและใช้งาน enum
+  - `ch_03_method/` – การสร้าง method ให้กับ struct/enum
+  - `ch_04_trait/` – การสร้างและใช้งาน trait
 
 ## 🚀 วิธีใช้งาน
 
@@ -79,6 +88,14 @@ cargo run -p exercise
 # Section 03: Collections และ Error Handling
 cargo run -p ch_01_vector
 cargo run -p ch_02_string
+cargo run -p ch_03_hashmap
+cargo run -p ch_04_option_result
+
+# Section 04: Structs, Enum, Method, Trait
+cargo run -p ch_01_struct
+cargo run -p ch_02_enum
+cargo run -p ch_03_method
+cargo run -p ch_04_trait
 
 # หรือเข้าไปในโฟลเดอร์แล้วรัน
 cd section_01_basics/ch_01_hello_world
@@ -108,6 +125,14 @@ cargo watch -q -c -x "run -p exercise"
 # Section 03: Collections และ Error Handling
 cargo watch -q -c -x "run -p ch_01_vector"
 cargo watch -q -c -x "run -p ch_02_string"
+cargo watch -q -c -x "run -p ch_03_hashmap"
+cargo watch -q -c -x "run -p ch_04_option_result"
+
+# Section 04: Structs, Enum, Method, Trait
+cargo watch -q -c -x "run -p ch_01_struct"
+cargo watch -q -c -x "run -p ch_02_enum"
+cargo watch -q -c -x "run -p ch_03_method"
+cargo watch -q -c -x "run -p ch_04_trait"
 
 # หรือ watch ในโฟลเดอร์ของ package
 cd section_01_basics/ch_01_hello_world
@@ -157,8 +182,17 @@ cargo test
 
 ## 🎯 สิ่งที่จะได้เรียนรู้ใน Section 03
 
-- **Chapter 1**: Vector และการจัดการ collections
-- **Chapter 2**: String และการจัดการข้อความใน Rust
+**Chapter 1**: Vector และการจัดการ collections
+**Chapter 2**: String และการจัดการข้อความใน Rust
+**Chapter 3**: HashMap และการจัดการ key-value
+**Chapter 4**: Option, Result และ error handling
+
+## 🎯 สิ่งที่จะได้เรียนรู้ใน Section 04
+
+- **Chapter 1**: การสร้างและใช้งาน struct
+- **Chapter 2**: การสร้างและใช้งาน enum
+- **Chapter 3**: การสร้าง method ให้กับ struct/enum
+- **Chapter 4**: การสร้างและใช้งาน trait
 
 ## 🤝 การสนับสนุน
 
