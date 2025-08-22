@@ -12,7 +12,7 @@ members = [
     "section_02_control_ownership/ch_05_ownership_borrowing", "section_02_control_ownership/ch_06_ownership_borrowing_recap", 
     "section_02_control_ownership/exercise",   
     "section_03_collections_errors/ch_01_vector", 
-    "section_03_collections_errors/ch_02_string", "section_03_collections_errors/ch_03_hashmap", "section_03_collections_errors/ch_04_option_result", "section_04_structs_traits_project/ch_01_struct", "section_04_structs_traits_project/ch_02_enum", "section_04_structs_traits_project/ch_03_method", "section_04_structs_traits_project/ch_04_trait"]
+    "section_03_collections_errors/ch_02_string", "section_03_collections_errors/ch_03_hashmap", "section_03_collections_errors/ch_04_option_result", "section_04_structs_traits_project/ch_01_struct", "section_04_structs_traits_project/ch_02_enum", "section_04_structs_traits_project/ch_03_method", "section_04_structs_traits_project/ch_04_trait", "section_04_structs_traits_project/ch_05_tests", "section_05_expense_tracker_workshop/workshop_expense_tracker"]
 
 # ใช้ dependency resolver เวอร์ชัน 2 (แนะนำสำหรับ edition 2021+)
 resolver = "2"
