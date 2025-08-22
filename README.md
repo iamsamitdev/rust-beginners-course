@@ -50,6 +50,11 @@
   - `ch_02_enum/` – การสร้างและใช้งาน enum
   - `ch_03_method/` – การสร้าง method ให้กับ struct/enum
   - `ch_04_trait/` – การสร้างและใช้งาน trait
+  - `ch_05_tests/` – การเขียน tests และ unit testing
+
+### Section 05: Expense Tracker Workshop
+- `section_05_expense_tracker_workshop/` – Workshop สุดท้าย CLI รายรับ-รายจ่าย
+  - `workshop_expense_tracker/` – สร้างแอปพลิเคชัน CLI จริง
 
 ## 🚀 วิธีใช้งาน
 
@@ -96,6 +101,10 @@ cargo run -p ch_01_struct
 cargo run -p ch_02_enum
 cargo run -p ch_03_method
 cargo run -p ch_04_trait
+cargo run -p ch_05_tests
+
+# Section 05: Expense Tracker Workshop
+cargo run -p workshop_expense_tracker
 
 # หรือเข้าไปในโฟลเดอร์แล้วรัน
 cd section_01_basics/ch_01_hello_world
@@ -133,6 +142,10 @@ cargo watch -q -c -x "run -p ch_01_struct"
 cargo watch -q -c -x "run -p ch_02_enum"
 cargo watch -q -c -x "run -p ch_03_method"
 cargo watch -q -c -x "run -p ch_04_trait"
+cargo watch -q -c -x "run -p ch_05_tests"
+
+# Section 05: Expense Tracker Workshop
+cargo watch -q -c -x "run -p workshop_expense_tracker"
 
 # หรือ watch ในโฟลเดอร์ของ package
 cd section_01_basics/ch_01_hello_world
@@ -193,6 +206,15 @@ cargo test
 - **Chapter 2**: การสร้างและใช้งาน enum
 - **Chapter 3**: การสร้าง method ให้กับ struct/enum
 - **Chapter 4**: การสร้างและใช้งาน trait
+- **Chapter 5**: การเขียน tests และ unit testing
+
+## 🎯 สิ่งที่จะได้เรียนรู้ใน Section 05
+
+- **Workshop Project**: สร้างแอปพลิเคชัน CLI สำหรับจัดการรายรับ-รายจ่าย
+- **File I/O**: การอ่านและเขียนไฟล์ CSV
+- **Error Handling**: การจัดการข้อผิดพลาดในโปรแกรมจริง
+- **Testing**: การทดสอบโปรแกรมและ documentation
+- **Real-world Application**: การนำความรู้ทั้งหมดมาใช้ในโปรเจ็กต์จริง
 
 ## 🤝 การสนับสนุน
 
