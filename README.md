@@ -54,7 +54,43 @@
 
 ### Section 05: Expense Tracker Workshop
 - `section_05_expense_tracker_workshop/` – Workshop สุดท้าย CLI รายรับ-รายจ่าย
-  - `workshop_expense_tracker/` – สร้างแอปพลิเคชัน CLI จริง
+- `workshop_expense_tracker/` – สร้างแอปพลิเคชัน CLI จริง
+- **Features**: CSV file I/O, error handling, testing, cross-platform
+- **Structure**: modular design with lib.rs, tests, และ configuration
+
+## 🌐 Cross-Platform Deployment
+
+### Build สำหรับ Platforms ต่างๆ
+```bash
+# ติดตั้ง targets สำหรับ cross-compilation
+rustup target add x86_64-pc-windows-gnu
+rustup target add x86_64-apple-darwin
+rustup target add x86_64-unknown-linux-gnu
+rustup target add aarch64-apple-darwin
+
+# Build สำหรับ Windows
+cargo build --release --target x86_64-pc-windows-gnu -p workshop_expense_tracker
+
+# Build สำหรับ macOS (Intel)
+cargo build --release --target x86_64-apple-darwin -p workshop_expense_tracker
+
+# Build สำหรับ macOS (Apple Silicon)
+cargo build --release --target aarch64-apple-darwin -p workshop_expense_tracker
+
+# Build สำหรับ Linux
+cargo build --release --target x86_64-unknown-linux-gnu -p workshop_expense_tracker
+```
+
+### Deploy บน Cloud Platforms
+```bash
+# สำหรับ Render, Railway, หรือ Fly.io
+# ต้องแปลง CLI เป็น Web API ก่อน
+# ดูตัวอย่างใน section_05_expense_tracker_workshop/
+
+# Docker deployment
+docker build -t expense-tracker .
+docker run -p 3000:3000 expense-tracker
+```
 
 ## 🚀 วิธีใช้งาน
 
@@ -152,19 +188,28 @@ cd section_01_basics/ch_01_hello_world
 cargo watch -q -c -x run
 ```
 
-### เครื่องมือที่มีประโยชน์
-```bash
-# ตรวจสอบ syntax
-cargo check
+## 📦 Project Structure
 
-# จัดรูปแบบโค้ด
-cargo fmt
-
-# ตรวจสอบคุณภาพโค้ด
-cargo clippy
-
-# รัน tests
-cargo test
+```
+rust-beginners-course/
+├── section_01_basics/           # พื้นฐาน Rust
+├── section_02_control_ownership/ # Control Flow และ Ownership
+├── section_03_collections_errors/ # Collections และ Error Handling
+├── section_04_structs_traits_project/ # Structs, Traits, Testing
+├── section_05_expense_tracker_workshop/ # Workshop Project
+│   └── workshop_expense_tracker/
+│       ├── src/
+│       │   ├── lib.rs          # Library crate
+│       │   ├── main.rs         # Binary crate
+│       │   ├── models.rs       # Data models
+│       │   ├── add.rs          # Add functionality
+│       │   ├── summary.rs      # Summary functionality
+│       │   ├── errors.rs       # Error types
+│       │   └── validation.rs   # Input validation
+│       ├── tests/              # Integration tests
+│       └── Cargo.toml
+├── Cargo.toml                  # Workspace configuration
+└── README.md
 ```
 
 ## 📖 วิธีการเรียน
@@ -213,8 +258,186 @@ cargo test
 - **Workshop Project**: สร้างแอปพลิเคชัน CLI สำหรับจัดการรายรับ-รายจ่าย
 - **File I/O**: การอ่านและเขียนไฟล์ CSV
 - **Error Handling**: การจัดการข้อผิดพลาดในโปรแกรมจริง
-- **Testing**: การทดสอบโปรแกรมและ documentation
+- **Testing**: การทดสอบโปรแกรมและ documentation (unit tests, integration tests)
+- **Modular Design**: การแบ่งโครงสร้างโค้ดเป็น modules
+- **Cross-Platform**: การ build สำหรับ OS ต่างๆ (Windows, macOS, Linux)
+- **Configuration**: การจัดการ config files และ environment
 - **Real-world Application**: การนำความรู้ทั้งหมดมาใช้ในโปรเจ็กต์จริง
+
+## 🚀 Advanced Features
+
+### 🧪 การทดสอบโปรแกรม Testing
+```bash
+# รัน unit tests
+cargo test -p workshop_expense_tracker
+
+# รัน integration tests
+cargo test --test integration_test -p workshop_expense_tracker
+
+# รัน tests พร้อม coverage
+cargo test --all-features -p workshop_expense_tracker
+```
+
+### การใช้งาน CLI
+```bash
+# เพิ่มรายจ่าย
+cargo run -p workshop_expense_tracker -- add --amount 100.50 --description "Lunch" --type expense
+
+# ดูสรุป
+cargo run -p workshop_expense_tracker -- summary
+
+# ดูสรุปตามเดือน
+cargo run -p workshop_expense_tracker -- summary --month 8 --year 2025
+```
+
+### ✨ Code Quality และ Formatting
+```bash
+# 🔍 ตรวจสอบ code quality และหาปัญหา
+cargo clippy
+
+# 📝 ตรวจสอบ code quality แบบเข้มงวด
+cargo clippy -- -D warnings
+
+# 🔧 แก้ไข clippy warnings อัตโนมัติ
+cargo clippy --fix --allow-dirty --allow-no-vcs -p workshop_expense_tracker
+
+# 🎨 Format โค้ดให้เป็นมาตรฐาน
+cargo fmt -p workshop_expense_tracker
+
+# ตรวจสอบว่าโค้ดถูก format แล้วหรือยัง
+cargo fmt --check -p workshop_expense_tracker
+```
+
+### 📚 Documentation
+```bash
+# ติดตั้ง
+cargo install rustdoc
+
+# สร้าง documentation
+cargo doc -p workshop_expense_tracker
+
+# เปิด documentation ในเบราว์เซอร์
+cargo doc --open -p workshop_expense_tracker
+
+# สร้าง documentation โดยไม่รวม dependencies
+cargo doc --no-deps --open -p workshop_expense_tracker
+```
+
+### เครื่องมือที่มีประโยชน์
+```bash
+# ตรวจสอบ syntax
+cargo check
+
+# จัดรูปแบบโค้ด
+cargo fmt
+
+# ตรวจสอบคุณภาพโค้ด
+cargo clippy
+
+# รัน tests
+cargo test
+
+# รัน tests สำหรับ package เฉพาะ
+cargo test -p workshop_expense_tracker
+
+# Build release สำหรับ production
+cargo build --release
+
+# ตรวจสอบ dependencies
+cargo tree
+
+# อัปเดต dependencies
+cargo update
+```
+
+### 🔄 ขั้นตอนการแก้ไขปัญหา
+
+1. **หาก cargo clippy แจ้ง warnings:**
+   ```bash
+   cargo clippy --fix --allow-dirty --allow-no-vcs
+   ```
+
+2. **หาก format ไม่ถูกต้อง:**
+   ```bash
+   cargo fmt
+   ```
+
+3. **หาก tests ไม่ผ่าน:**
+   ```bash
+   cargo test --verbose
+   ```
+
+4. **หาก compilation error:**
+   ```bash
+   cargo check
+   # แก้ไขโค้ดตาม error messages
+
+## 🚀 การพัฒนาต่อ
+
+### Features ที่อาจเพิ่มได้:
+
+1. **การกรองข้อมูล**
+   - กรองตามวันที่
+   - กรองตามหมวดหมู่
+   - กรองตามประเภท
+
+2. **การรายงาน**
+   - สรุปรายเดือน/รายปี
+   - กราฟแสดงผล
+   - Export เป็น PDF
+
+3. **การจัดการข้อมูล**
+   - แก้ไขรายการ
+   - ลบรายการ
+   - Backup/Restore
+
+4. **UI/UX**
+   - สีสันในเทอร์มินัล
+   - Pagination สำหรับรายการเยอะ
+   - Auto-complete สำหรับหมวดหมู่
+
+## 🏁 Quick Start สำหรับมือใหม่
+
+### 🖥️ All Platforms (ใช้ได้ทุก OS)
+```bash
+# 1. Clone และ setup
+git clone <repository-url>
+cd rust-expense-tracker-cli
+
+# 2. ตรวจสอบ code quality
+cargo fmt --check
+cargo clippy
+
+# 3. รัน tests
+cargo test
+
+# 4. Build release version
+cargo build --release
+
+# 5. รันโปรแกรม (เลือกวิธีใดวิธีหนึ่ง)
+cargo run  # หรือ
+```
+
+### 🪟 Windows
+```powershell
+# รันไฟล์ที่ build แล้ว
+.\target\release\expense-tracker.exe
+```
+
+### 🍎 macOS/Linux
+```bash
+# รันไฟล์ที่ build แล้ว
+./target/release/expense-tracker
+```
+
+### 📋 Checklist สำหรับการ Deploy
+- [ ] `cargo fmt` - ✅ Code formatting
+- [ ] `cargo clippy` - ✅ Code quality  
+- [ ] `cargo test` - ✅ All tests pass
+- [ ] `cargo build --release` - ✅ Optimized build
+- [ ] รันไฟล์ executable โดยตรง - ✅ Works on target platform
+
+**หากพบปัญหาหรือมีข้อเสนอแนะ กรุณาสร้าง Issue ใน GitHub Repository** ✨
 
 ## 🤝 การสนับสนุน
 
