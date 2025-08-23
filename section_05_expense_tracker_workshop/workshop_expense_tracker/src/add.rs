@@ -1,7 +1,7 @@
 use crate::config::{CSV_HAS_HEADERS, EXPENSES_FILE};
 use crate::errors::ExpenseError;
 use crate::models::Entry;
-use crate::validation::{validate_amount,validate_category,validate_date,parse_entry_type};
+use crate::validation::{parse_entry_type, validate_amount, validate_category, validate_date};
 use csv::WriterBuilder;
 use std::fs::OpenOptions;
 use std::io::{self, Write};

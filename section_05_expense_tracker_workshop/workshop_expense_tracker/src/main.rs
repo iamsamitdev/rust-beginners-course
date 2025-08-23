@@ -1,12 +1,17 @@
+use std::env;
+use std::io::{self, Write};
 use workshop_expense_tracker::config::ensure_data_directory;
 use workshop_expense_tracker::errors::ExpenseError;
 use workshop_expense_tracker::{
     add::add_entry,
-    summary:: {calculate_summary, list_entries},
+    summary::{calculate_summary, list_entries},
 };
-use std::io::{self, Write};
 
-fn main() -> Result<(), ExpenseError>{
+fn main() -> Result<(), ExpenseError> {
+    // Set working directory to project directory
+    let project_dir = env!("CARGO_MANIFEST_DIR");
+    env::set_current_dir(project_dir)?;
+
     // Initialize data directory
     if let Err(e) = ensure_data_directory() {
         eprintln!("⚠️ ไม่สามารถสร้างโฟลเดอร์ข้อมูลได้: {e}")
@@ -19,7 +24,7 @@ fn main() -> Result<(), ExpenseError>{
         println!("3. คำนวณยอดรวม");
         println!("4. ออกจากโปรแกรม");
         print!("👉 กรุณาเลือกเมนู (1-4): ");
-        
+
         io::stdout().flush()?;
 
         let mut choice = String::new();

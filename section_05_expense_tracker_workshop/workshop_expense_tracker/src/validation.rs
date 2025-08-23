@@ -4,7 +4,6 @@ use chrono::NaiveDate;
 
 // Validate Amount
 pub fn validate_amount(amount: f64) -> Result<f64, ExpenseError> {
-
     if amount < MIN_AMOUNT {
         return Err(ExpenseError::ParseError(format!(
             "จำนวนเงินต้องมากกว่า {MIN_AMOUNT:.2}"
@@ -18,7 +17,6 @@ pub fn validate_amount(amount: f64) -> Result<f64, ExpenseError> {
     }
 
     Ok(amount)
-
 }
 
 // Valide Category
